@@ -1,0 +1,18 @@
+Executable      =/cephfs/user/s6subans/QT_2020/qt-2019-2020/qt-2019-2020/run/RunJob.sh
+
+arguments	= $(OPDIR) $(INFILE) $(OPFILE) $(SYST) $(BASE) $(Cluster) $(Process)
+Universe = vanilla
+
+transfer_executable=True
+
+output          = /cephfs/user/s6subans/QT_2020/qt-2019-2020/qt-2019-2020/OutCont/Zbb.$(Cluster).$(Process).out
+error		=/cephfs/user/s6subans/QT_2020/qt-2019-2020/qt-2019-2020/ErrCont/Zbb.$(Cluster).$(Process).err
+log		=/cephfs/user/s6subans/QT_2020/qt-2019-2020/qt-2019-2020/LogCont/Zbb.$(Cluster).$(Process).log
+Request_memory	= 8000
+Request_cpus            = 1
+Request_disk            = 100 MB
++MaxRuntimeHours=20
++RequestRuntime = 3600
++CephFS_IO= "medium"
++ContainerOS            = "CentOS7"
+queue $(NJOBS) 

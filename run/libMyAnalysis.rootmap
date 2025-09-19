@@ -1,0 +1,12 @@
+[ libMyAnalysis.so ]
+# List of selected classes
+class Nominal
+class fatjet
+class muon
+class photon
+class trackjet
+header ../MyAnalysis/Nominal.h
+header ../MyAnalysis/fatjet.h
+header ../MyAnalysis/muon.h
+header ../MyAnalysis/photon.h
+header ../MyAnalysis/trackjet.h
